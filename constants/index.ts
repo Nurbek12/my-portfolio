@@ -122,9 +122,9 @@ export const projects = [
         images: [1,2,3],
     },
     {
-        title: 'POS-система для автоматизации кухни',
-        url: 'https://pos-system-n12.onrender.com',
-        github: 'https://github.com/Nurbek12/pos-system',
+        title: 'POS-система для автоматизации кухни Fish & Chicken (Шахрисабз)',
+        url: '',
+        github: '',
         langs: ['Vue', 'Vuetify', 'Express', 'Socket'],
         imageFolder: 'pos',
         images: [2,1,3,4,5,6,7],
@@ -144,6 +144,14 @@ export const projects = [
         langs: ['Tailwind', 'Vue', 'Vue-tg', 'Express', 'Postgresql', 'Grammy'],
         imageFolder: 'twa',
         images: [13, 1,2,3,4,5,6,7,8,9,10,11,12],
+    },
+    {
+        title: 'Здес можно было ваша проект)',
+        url: '',
+        github: '',
+        langs: ['на все'],
+        imageFolder: 'none',
+        images: [1],
     },
 ]
 
@@ -166,9 +174,9 @@ export const aboutCards = [
 ]
 
 export const socialLinks = [
-    { icon: CoBrandTelegramPlane, title: 'Telegram', url: 'https://t.me/nurbek_xd' },
-    { icon: CoBrandFacebookF, title: 'Facebook', url: 'https://www.facebook.com/profile.php?id=100073779323449' },
-    { icon: CoBrandInstagram, title: 'Instagram', url: 'https://www.instagram.com/nurbek_developer_/' },
-    { icon: CoBrandGithub, title: 'Github', url: 'https://github.com/Nurbek12' },
-    { icon: CoBrandLinkedinIn, title: 'Linkedin', url: 'https://www.linkedin.com/in/nurbek-rustamov-7111a6224' },
+    { icon: CoBrandTelegramPlane, title: 'Telegram', name: "t.me/nurbek_xd", url: 'https://t.me/nurbek_xd' },
+    { icon: CoBrandFacebookF, title: 'Facebook', name: "facebook/Nurbek", url: 'https://www.facebook.com/profile.php?id=100073779323449' },
+    { icon: CoBrandInstagram, title: 'Instagram', name: "instagram/nurbek_developer_", url: 'https://www.instagram.com/nurbek_developer_/' },
+    { icon: CoBrandGithub, title: 'Github', name: "github/Nurbek12", url: 'https://github.com/Nurbek12' },
+    { icon: CoBrandLinkedinIn, title: 'Linkedin', name: "linkedin/nurbek-rustamov-7111a6224", url: 'https://www.linkedin.com/in/nurbek-rustamov-7111a6224' },
 ]

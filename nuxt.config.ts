@@ -9,4 +9,8 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  runtimeConfig: {
+    BOT_TOKEN: process.env.TELEGRAM_BOT_KEY,
+    BOT_USER: process.env.TELEGRAM_USER_ID,
+  }
 });

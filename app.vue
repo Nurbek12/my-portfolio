@@ -5,7 +5,7 @@
     <div class="relative z-10 container py-20 h-full items-center grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="relative space-y-4 z-10">
         <h1 class="text-4xl font-medium text-white">
-          <span class="text-primary-400">Нурбек Рустамов</span>, Фул Стек разработчик</h1>
+          <span class="text-primary-500">Нурбек Рустамов</span>, Фул Стек разработчик</h1>
         <p class="text-gray-200 font-light">Привет! Я Нурбек Рустамов, разработчик с опытом 2-3 лет работы в различных проектах. Я специализируюсь на создании высокопроизводительных и масштабируемых веб-приложений. Мои навыки включают в себя фронтенд, бэкенд и десктоп разработку, а также оптимизацию производительности и SEO</p>
         <div class="flex items-center gap-2">
           <app-button>Скачать Резюме</app-button>
@@ -79,33 +79,63 @@
         <h1 class="text-white text-2xl">Контакты</h1>
       </div>
 
-      <form class="mt-12 w-full bg-background-900 px-6 py-4 rounded-lg space-y-4">
-        <h1 class="text-white text-lg">Свяжитесь со мной</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <app-input placeholder="Имя и фамилия" />
-          <!-- <app-input placeholder="Имя и фамилия" /> -->
-          <app-input placeholder="Сообщения" />
-          <app-button>Отправить</app-button>
+      <div class="mt-6 p-2 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div class="rounded-lg p-8 bg-background-800 flex flex-col justify-between gap-4">
+          <div v-for="link,i in socialLinks" :key="i" class="flex items-center gap-8">
+            <div>
+              <component :is="link.icon" class="text-white size-8" />
+            </div>
+            <div>
+              <h2 class="text-white font-medium">{{ link.title }}</h2>
+              <a :href="link.url" class="text-gray-300 text-sm hover:underline">{{ link.name }}</a>
+            </div>
+          </div>
         </div>
-      </form>
+
+        <form @submit.prevent="handlePost" class="w-full bg-background-00 px-6 pt-6 rounded-lg space-y-4">
+          <div>
+            <h1 class="text-white text-lg">Свяжитесь со мной</h1>
+            <p class="text-gray-300 text-sm mt-2">Если у вас есть идея или проект, над которым вы хотите работать,
+              не стесняйтесь связаться со мной. Буду рад обсудить, как мы можем сотрудничать.</p>
+          </div>
+          <div class="grid grid-cols-1 gap-4">
+            <app-input v-model="formData.name" required placeholder="Имя и фамилия" />
+            <app-textarea v-model="formData.message" required placeholder="Сообщения" />
+            <app-button :disabled="loading">Отправить</app-button>
+          </div>
+        </form>
+      </div>
 
     </section>
   </main>
-  <footer>
-    <div class="container text-white text-xl">
-      Если у вас есть идея или проект, над которым вы хотите работать,
-      не стесняйтесь связаться со мной. Буду рад обсудить, как мы можем сотрудничать.
-    </div>
-  </footer>
 </template>
 
 <script setup lang="ts">
 import { AkGithubFill } from '@kalimahapps/vue-icons'
-import { projects, skills, aboutCards } from '~/constants'
+import { projects, skills, aboutCards, socialLinks } from '~/constants'
 
 useHead({
   title: 'Нурбек Рустамов | Портфолио'
 })
+
+const loading = ref(false)
+const formData = reactive({
+  name: "",
+  message: ""
+})
+
+const handlePost = async () => {
+  try {
+    loading.value = true
+    await $fetch('/api/send', { method: "POST", body: formData })
+    alert("Успешно отправлено!")
+    Object.assign(formData, { name: "", message: "" })
+  } catch (error) {
+    console.log(error)
+  } finally {
+    loading.value = false
+  }
+}
 
 </script>
 

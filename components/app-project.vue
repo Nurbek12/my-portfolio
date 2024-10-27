@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#2e2e33] p-4 rounded-lg flex flex-col gap-2">
+    <div class="bg-background-900 border border-background-700 p-4 rounded-lg flex flex-col gap-2">
         <div class="rounded h-[140px] relative overflow-hidden">
             <template v-for="img,i in project.images">
                 <img v-show="image===i"
@@ -15,7 +15,9 @@
         </div>
         <div class="flex justify-start items-end gap-2 flex-1">
             <a target="_blank" :href="project.url">
-                <app-button :disabled="project.url===''" class="text-sm !px-3 !py-1.5">Посмотреть</app-button>
+                <app-button :disabled="project.url===''" class="text-sm !px-3 !py-1.5">
+                    {{ project.imageFolder === "none"  ? "Посмотрим)": "Посмотреть"}}
+                </app-button>
             </a>
             <a target="_blank" v-if="project.github!==''" :href="project.github">
                 <app-button-outline class="text-sm !px-3 !py-1">Github</app-button-outline>
