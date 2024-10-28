@@ -12,6 +12,7 @@
   "dependencies": {
     "@kalimahapps/vue-icons": "^1.7.1",
     "nuxt": "^3.13.2",
+    "telegraf": "^4.16.3",
     "vue": "latest",
     "vue-router": "latest"
   },

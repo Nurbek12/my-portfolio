@@ -1,7 +1,7 @@
 <template>
   <app-navbar />
 
-  <header class="h-screen overflow-hidden w-full bg-background-900 relative">
+  <header class="h-screen w-full bg-background-900 relative">
     <div class="relative z-10 container py-20 h-full items-center grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="relative space-y-4 z-10">
         <h1 class="text-4xl font-medium text-white">
@@ -20,14 +20,14 @@
         <div class="z-0 absolute pointer-events-none w-[700px] h-[700px] rounded-full border border-primary-600/30"></div>
         <div class="z-0 absolute pointer-events-none w-[1300px] h-[1300px] rounded-full border border-primary-600/20"></div>
         <div class="z-0 absolute pointer-events-none w-[1900px] h-[1900px] rounded-full border border-primary-600/20"></div>
-        <div class="earth-animation absolute w-[350px] h-[350px] rounded-full overflow-hidden z-10"></div>
+        <div class="opacity-70 md:opacity-100 earth-animation absolute w-[350px] h-[350px] rounded-full overflow-hidden z-10"></div>
       </div>
     </div>
   </header>
 
   <main class="min-h-screen w-full bg-background-900">
 
-    <section class="container pt-32 pb-10 h-full" id="about">
+    <section class="container pt-32 pb-10 h-full relative z-10" id="about">
       <div class="text-center">
         <h1 class="text-white text-2xl">Обо мне - Биография</h1>
       </div>
@@ -56,7 +56,7 @@
       <div class="mt-12 grid grid-cols-3 gap-4">
         
         <div v-for="s,i in skills" :key="i">
-          <h3 class="text-white font-medium text-center">{{ s.title }}</h3>
+          <h3 class="text-white font-medium"  :class="['text-start md:text-center','text-center','text-end md:text-center'][i]" >{{ s.title }}</h3>
 
           <div class="mt-6 flex flex-wrap items-center gap-4" :class="['justify-start','justify-center','justify-end'][i]">
 
@@ -79,7 +79,7 @@
         <h1 class="text-white text-2xl">Контакты</h1>
       </div>
 
-      <div class="mt-6 p-2 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-2">
+      <div class="mt-6 py-2 rounded-xl grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="rounded-lg p-8 bg-background-800 flex flex-col justify-between gap-4">
           <div v-for="link,i in socialLinks" :key="i" class="flex items-center gap-8">
             <div>
@@ -92,7 +92,7 @@
           </div>
         </div>
 
-        <form @submit.prevent="handlePost" class="w-full bg-background-00 px-6 pt-6 rounded-lg space-y-4">
+        <form @submit.prevent="handlePost" class="w-full bg-background-00 pt-6 rounded-lg space-y-4 pb-20 md:pb-0">
           <div>
             <h1 class="text-white text-lg">Свяжитесь со мной</h1>
             <p class="text-gray-300 text-sm mt-2">Если у вас есть идея или проект, над которым вы хотите работать,
@@ -142,6 +142,11 @@ const handlePost = async () => {
 <style>
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+html, body {
+  width: 100%;
 }
 
 .earth-animation {

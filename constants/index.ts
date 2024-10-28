@@ -4,6 +4,10 @@ import { FlBrainCircuit, CoEducation, LiDiamond,
     CoBrandInstagram,
     CoBrandGithub,
     CoBrandLinkedinIn,
+    ClMainComponent,
+    FlTextAlignLeft,
+    CaPhone,
+    McHome2Line,
 } from '@kalimahapps/vue-icons'
 
 export const skills = [
@@ -75,14 +79,14 @@ export const projects = [
     },
     {
         title: 'Игра шашки',
-        url: 'https://vue-checkers-n12.onrender.com/',
+        url: 'https://vue-checkers-n12.onrender.com',
         github: 'https://github.com/Nurbek12/vue-tsc-checkers',
         langs: ['Vue','Express','Socket'],
         imageFolder: 'checkers',
         images: [1,2],
     },
     {
-        title: 'Регистрация и обработка данных населении',
+        title: 'Регистрация и обработка данных населении (Наваи)',
         url: '',
         github: '',
         langs: ['Vue', 'Vuetify', 'Express', 'Mongodb'],
@@ -98,7 +102,7 @@ export const projects = [
         images: [1, 2, 3, 4, 5, 6],
     },
     {
-        title: 'Фронт енд сайта для Медицинское Оборудование Кешмед',
+        title: 'Фронт енд сайта для Медицинское Оборудование Кешмед (Шахрисабз)',
         url: 'https://keshmed.uz',
         github: '',
         langs: ['Vue','Vuetify','Nuxt','Django','Postgresql'],
@@ -106,7 +110,7 @@ export const projects = [
         images: [1, 2, 3, 4],
     },
     {
-        title: 'СРМ платформа для сайта Родной Климата',
+        title: 'СРМ платформа для сайта Родной Климата (Россия)',
         url: 'https://crm-rk.onrender.com',
         github: '',
         langs: ['Tailwind', 'Vue', 'Express', 'Postgresql'],
@@ -114,7 +118,7 @@ export const projects = [
         images: [2,1,3,4,5,6,7,8],
     },
     {
-        title: 'Электон склад - десктоп программа для магазин электротехники',
+        title: 'Электронный склад - десктоп программа для магазина электротехники (Паярик)',
         url: '',
         github: '',
         langs: ['Tailwind', 'Vue', 'Electron', 'Mongodb'],
@@ -130,7 +134,7 @@ export const projects = [
         images: [2,1,3,4,5,6,7],
     },
     {
-        title: 'Фронт энд сайта для Dental Implantology Center',
+        title: 'Фронт энд сайта для Dental Implantology Center (Самарканд)',
         url: 'https://dr-ikramov.uz',
         github: '',
         langs: ['Tailwind','Vue','Nuxt','Nest','Postgresql'],
@@ -146,12 +150,12 @@ export const projects = [
         images: [13, 1,2,3,4,5,6,7,8,9,10,11,12],
     },
     {
-        title: 'Здес можно было ваша проект)',
+        title: 'Здесь возможно будет ваш проект)',
         url: '',
         github: '',
-        langs: ['на все'],
+        langs: ['на ваш выбор'],
         imageFolder: 'none',
-        images: [1],
+        images: [2],
     },
 ]
 
@@ -179,4 +183,12 @@ export const socialLinks = [
     { icon: CoBrandInstagram, title: 'Instagram', name: "instagram/nurbek_developer_", url: 'https://www.instagram.com/nurbek_developer_/' },
     { icon: CoBrandGithub, title: 'Github', name: "github/Nurbek12", url: 'https://github.com/Nurbek12' },
     { icon: CoBrandLinkedinIn, title: 'Linkedin', name: "linkedin/nurbek-rustamov-7111a6224", url: 'https://www.linkedin.com/in/nurbek-rustamov-7111a6224' },
+]
+
+export const links = [
+    { icon: McHome2Line, title: "Главная страница", url: "#" },
+    { icon: FlTextAlignLeft, title: "Обо мне", url: "#about" },
+    { icon: ClMainComponent, title: "Проекты", url: "#projects" },
+    { icon: FlBrainCircuit, title: "Навыки", url: "#skills" },
+    { icon: CaPhone, title: "Контакты", url: "#contacts" },
 ]
