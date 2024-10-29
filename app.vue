@@ -142,11 +142,11 @@ const handlePost = async () => {
 <style>
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 html, body {
   width: 100%;
+  overflow-x: hidden;
 }
 
 .earth-animation {
