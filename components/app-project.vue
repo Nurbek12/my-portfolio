@@ -12,10 +12,10 @@
                 </template>
             </template>
             <div v-if="project.images.length>1" class="absolute space-x-1 right-0 bottom-0 bg-background-900 p-1 rounded-tl-lg">
-                <app-button @click="prevSlide" class="!px-1.5 py-1">
+                <app-button @click="prevSlide" class="!px-1.5 !py-1">
                     <AkChevronLeftSmall />
                 </app-button>
-                <app-button @click="nextSlide" class="!px-1.5 py-1">
+                <app-button @click="nextSlide" class="!px-1.5 !py-1">
                     <AkChevronRightSmall />
                 </app-button>
             </div>
