@@ -21,6 +21,8 @@ export const skills = [
             { title: 'Vue.js', icon: '/devsvg/vuejs.svg' },
             { title: 'Nuxt.js', icon: '/devsvg/nuxt-3.svg' },
             { title: 'Vuetify', icon: '/devsvg/v-logo.svg' },
+            { title: 'React.js', icon: '/devsvg/react-js-icon.svg' },
+            { title: 'Next.js', icon: '/devsvg/nextjs.svg' },
             { title: 'Figma', icon: '/devsvg/figma.svg' },
         ]
     },
@@ -163,7 +165,7 @@ export const aboutCards = [
     {
         icon: FlBrainCircuit,
         title: 'Опыт и навыки',
-        description: 'Я веб-разработчик с более чем 5 лет опыта в создании высокопроизводительных и масштабируемых веб-приложений. Мои навыки включают в себя: Фронтенд и Бэкенд разработку, UI/UX дизайн, Разработка Telegram ботов, SEO оптимизация, Контейнеризация и оркестрация, Юнит Тестирование, Разработка десктопных приложений и т.д. А также знаю Solid, KISS, DRY, FSD'
+        description: 'Я веб-разработчик с более чем 2-3x лет опыта в создании высокопроизводительных и масштабируемых веб-приложений. Мои навыки включают в себя: Фронтенд и Бэкенд разработку, UI/UX дизайн, Разработка Telegram ботов, SEO оптимизация, Контейнеризация и оркестрация, Юнит Тестирование, Разработка десктопных приложений и т.д. А также знаю Solid, KISS, DRY, FSD'
     },
     {
         icon: CoEducation,
