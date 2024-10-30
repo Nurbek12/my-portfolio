@@ -110,7 +110,7 @@ export const projects = [
         images: [1, 2, 3, 4],
     },
     {
-        title: 'СРМ платформа для сайта Родной Климата (Россия)',
+        title: 'СРМ платформа для сайта',
         url: 'https://crm-rk.onrender.com',
         github: '',
         langs: ['Tailwind', 'Vue', 'Express', 'Postgresql'],
