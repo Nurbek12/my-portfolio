@@ -50,6 +50,7 @@ export const skills = [
             { title: 'Tauri', icon: '/devsvg/tauri-1.svg' },
             { title: 'RabbitMQ', icon: '/devsvg/rabbitmq-logo-svgrepo-com.svg' },
             { title: 'gRPC', icon: '/devsvg/logos--grpc-1.svg' },
+            { title: 'Telegraf', icon: '/devsvg/telegraf.svg' },
         ]
     },
 ]
