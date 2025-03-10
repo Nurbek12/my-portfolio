@@ -152,7 +152,7 @@ export const projects = [
     github: "",
     langs: ["Tailwind", "Vue", "Nuxt", "Nest", "Postgresql"],
     imageFolder: "dr-ikramov",
-    images: [1, 2, 3],
+    images: [1, 2, 3, 4],
   },
   {
     title: "Телеграм Веб приложения для магазина",
@@ -161,6 +161,22 @@ export const projects = [
     langs: ["Tailwind", "Vue", "Vue-tg", "Express", "Postgresql", "Grammy"],
     imageFolder: "twa",
     images: [13, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  },
+  {
+    title: "Платформа для ветеринарного и зоотехнического анализа",
+    url: "",
+    github: "",
+    langs: ["Next", "React", "Tailwind", "Shadcn"],
+    imageFolder: "vet",
+    images: [1,2,3,4,5],
+  },
+  {
+    title: "Программа для учета расходов предприятия",
+    url: "",
+    github: "",
+    langs: ["Vue", "Tailwind", "Shadcn", "Tauri", "Sqlite"],
+    imageFolder: "expense-app",
+    images: [1,2,3,4,5],
   },
   {
     title: "Здесь возможно будет ваш проект)",

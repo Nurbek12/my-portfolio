@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gray-50 dark:bg-background-900 border dark:border-background-700 p-4 rounded-lg flex flex-col gap-2">
+    <div class="bg-gray-50 dark:bg-background-800/50 border dark:border-background-700 p-4 rounded-lg flex flex-col gap-2">
         <div class="rounded h-[200px] relative overflow-hidden">
             <template v-for="img,i in project.images">
                 <template v-if="image===i">
@@ -11,7 +11,7 @@
                         class="w-full h-full object-contain absolute">
                 </template>
             </template>
-            <div v-if="project.images.length>1" class="absolute space-x-1 right-0 bottom-0 dark:bg-background-900 bg-gray-50 p-1 rounded-tl-lg">
+            <div v-if="project.images.length>1" class="absolute space-x-1 right-0 bottom-0 dark:bg-background-800/80 bg-gray-50 p-1 rounded-tl-lg">
                 <app-button @click="prevSlide" class="!px-1.5 !py-1">
                     <AkChevronLeftSmall />
                 </app-button>

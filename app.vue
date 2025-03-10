@@ -149,6 +149,9 @@ const handlePost = async () => {
   }
 }
 
+onMounted(async () => {
+  await $fetch('/api/v')
+})
 </script>
 
 <style>
